@@ -25,7 +25,22 @@
 				<h2>Tagging</h2>
 
 				<!-- ############### Aufgabe1a Form1 Start -->
-				<form id="tag-form" action="/tagging" method="post"></form>
+				<form id="tag-form" action="/tagging" method="post">
+					<label for="input2">lautitude</label>
+					<input id="input2" type="text" name="inpLautitide" value="44.799999999992">
+
+					<label for="input3">longitude</label>
+					<input id="input3" type="text" name="longitude" value="9.1457657">
+
+					<label for="input4">name</label>
+					<input id="input4" type="text" name="tagName" value="tag name">
+
+					<label for="input5">hashtag</label>
+					<input id="input5" type="text" name="hashtag" value="# + max. 10 letters">
+
+
+
+				</form>
 				<!-- ############### Aufgabe1a Form1 Ende -->
 
 			</section>
@@ -35,8 +50,8 @@
 
 				<!-- ############### Aufgabe1a Form2 Start -->
 				<form id="filter-form" action="/discovery" method="post">
-				  <label for="input1">Enter Search Therme</label>
-				  <input id="input1" type="text" name="searchTerm" value="Enter Search Term: #">
+				  <label for="input1">Filter by Search-Term</label>
+				  <input id="input1" type="text" name="searchTerm" value="Enter Search Term:">
 				</form>
 
 				<!-- ############### Aufgabe1a Form2 Ende -->
