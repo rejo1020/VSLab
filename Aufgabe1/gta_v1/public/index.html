@@ -22,6 +22,7 @@
 		<main>
 
 			<section class="tagging">
+			<div class="col-25">
 				<h2>Tagging</h2>
 
 				<!-- ############### Aufgabe1a Form1 Start -->
@@ -45,7 +46,7 @@
 				</form>
 				</fieldset>
 				<!-- ############### Aufgabe1a Form1 Ende -->
-
+			</div>	
 			</section>
 
 			<section class="discovery">
@@ -53,25 +54,31 @@
 
 				<!-- ############### Aufgabe1a Form2 Start -->
 				<fieldset>
+				<div class="col-75">
 				<legend>Filter by Search-Term</legend>
 				<form id="filter-form" action="/discovery" method="post">
 				  <input id="input1" type="text" name="searchTerm" value="search Term here" pattern="[#][a-z]+" maxlength="11"><br>
 				  <input type="submit" name="sendSearchTerm">
 				  <button form="filter-form" type="reset">Zurücksetzen</button>
 				</form>
+				</div>
 				</fieldset>
 
 				<!-- ############### Aufgabe1a Form2 Ende -->
 				<div class="taglist">
+				<div class="col-30">
 					<ul id="results">
 						<li>Castle (49.01379, 8.404435) #sight</li>
 						<li>IWI (49.01379, 8.390071) #edu</li>
 					</ul>
 				</div>
+				</div>
 
 				<div class="tagmap">
+				<div class="col-45">
 					<img id="result-img" src="./images/mapview.jpg" alt="a map with locations"/>
 					<div class="caption">Result map</div>
+				</div>
 				</div>
 
 			</section>
