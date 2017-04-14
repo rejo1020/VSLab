@@ -15,6 +15,7 @@ a {
 .col-25 {width: 25%; float: left;}
 .col-30 {width: 20%;float: left;}
 .col-45 {width: 45%;float: left;}
+.col-60 {width: 60%; float: left;}
 .col-75 {width: 70%;float: right;}
 
 
@@ -26,10 +27,12 @@ header {
 	padding: 10px;
 }
 
+
 footer{
 	background: lightgrey;
 	width: 100%;
 	float: left;
+	clear: both;
 }
 
 div.taglist li{
@@ -43,9 +46,13 @@ div.taglist li{
 
 ul, li {
 	list-style: none;
+	margin-left: -50px;
 }
 
 .discovery {
 	padding-top: 8px;
 }
 
+.filter-form {
+	padding-left: 330px;
+}
