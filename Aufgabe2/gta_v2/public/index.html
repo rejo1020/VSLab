@@ -30,16 +30,16 @@
 				<legend>Enter new GeoTag</legend>
 				<form id="tag-form" action="/tagging" method="post">
 					<label for="input2">lautitude</label><br>
-					<input id="input2" type="text" name="inpLautitide" value="44.799999999992" required><br>
+					<input id="input2" type="text" name="inpLautitide" placeholder="44.799999999992" required><br>
 
 					<label for="input3">longitude</label><br>
-					<input id="input3" type="text" name="longitude" value="9.1457657" required><br>
+					<input id="input3" type="text" name="longitude" placeholder="9.1457657" required><br>
 
 					<label for="input4">name</label><br>
-					<input id="input4" type="text" name="tagName" value="tag name" required maxlength="10"><br>
+					<input id="input4" type="text" name="tagName" placeholder="tag name" required maxlength="10"><br>
 
 					<label for="input5">hashtag</label><br>
-					<input id="input5" type="text" name="hashtag" value="# + max. 10 letters" pattern="[#][a-zA-Z]+" maxlength="11"><br>
+					<input id="input5" type="text" name="hashtag" placeholder="# + max. 10 letters" pattern="[#][a-zA-Z]+" maxlength="11"><br>
 
 					<input type="submit" name="sendNewTag">
 
@@ -57,7 +57,7 @@
 				<div class="col-45">
 				<legend>Filter by Search-Term</legend>
 				<form id="filter-form" action="/discovery" method="post">
-				  <input id="input1" type="text" name="searchTerm" value="search Term here" pattern="[#][a-zA-Z]+" maxlength="11">
+				  <input id="input1" type="text" name="searchTerm" placeholder="search Term here" pattern="[#][a-zA-Z]+" maxlength="11">
 				  <input id="dis_latitude" type="text" hidden>
 				  <input id="dis_longitude" type="text" hidden>
 				  <input type="submit" name="sendSearchTerm">
