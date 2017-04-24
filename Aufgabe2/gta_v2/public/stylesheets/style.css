@@ -1,0 +1,60 @@
+body {
+  padding: 40px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.col-25 {width: 25%; float: left;}
+.col-30 {width: 20%;float: left;}
+.col-45 {width: 45%;float: left;}
+.col-60 {width: 60%; float: left;}
+.col-75 {width: 70%;float: right;}
+
+
+
+
+header {
+	background: grey;
+	color: white;
+	padding: 10px;
+}
+
+
+footer{
+	background: lightgrey;
+	margin: 10px;
+	padding: 10px;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+div.taglist li{
+	background: cornflowerblue;
+	padding: 2px;
+	color: white;
+	border: 10px;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+ul, li {
+	list-style: none;
+	margin-left: -50px;
+}
+
+.discovery {
+	padding-top: 8px;
+}
+
+.filter-form {
+	padding-left: 330px;
+}
