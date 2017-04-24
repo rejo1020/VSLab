@@ -58,6 +58,8 @@
 				<legend>Filter by Search-Term</legend>
 				<form id="filter-form" action="/discovery" method="post">
 				  <input id="input1" type="text" name="searchTerm" value="search Term here" pattern="[#][a-zA-Z]+" maxlength="11">
+				  <input id="dis_latitude" type="text" hidden>
+				  <input id="dis_longitude" type="text" hidden>
 				  <input type="submit" name="sendSearchTerm">
 				  <button form="filter-form" type="reset">Zurücksetzen</button>
 				</form>
