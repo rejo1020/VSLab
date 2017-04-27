@@ -23,6 +23,7 @@ var gtaLocator = (function GtaLocator() {
      * Bei Fehler Callback 'onerror' mit Meldung.
      * Callback Funktionen als Parameter übergeben.
      */
+
     var tryLocate = function (onsuccess, onerror) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(onsuccess, function (error) {
@@ -48,6 +49,8 @@ var gtaLocator = (function GtaLocator() {
         }
     };
 
+
+
     // Auslesen Breitengrad aus der Position
     var getLatitude = function (position) {
         return position.coords.latitude;
@@ -57,6 +60,7 @@ var gtaLocator = (function GtaLocator() {
     var getLongitude = function (position) {
         return position.coords.longitude;
     };
+
 
     // Hier Google Maps API Key eintragen
     var apiKey = "YOUR API KEY HERE";
@@ -98,7 +102,7 @@ var gtaLocator = (function GtaLocator() {
 
         readme: "Dieses Objekt enthält 'öffentliche' Teile des Moduls.",
 
-        update: function () {
+        update: function (position) {
             // TODO Hier Inhalt der Funktion "update" ergänzen
         }
 
@@ -111,6 +115,6 @@ var gtaLocator = (function GtaLocator() {
  * des Skripts.
  */
 $(document).ready(function () {
-    alert("Hello World")
+    alert("Hello World");
     // TODO Hier den Aufruf für updateLocation einfügen
 });
