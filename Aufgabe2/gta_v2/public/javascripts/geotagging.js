@@ -59,7 +59,7 @@ var gtaLocator = (function GtaLocator() {
     };
 
     // Hier Google Maps API Key eintragen
-    var apiKey = "YOUR API KEY HERE";
+    var apiKey = "AIzaSyAr5HMx24WKonjEo00jqLObegGUkKCKRag";
 
     /**
      * Funktion erzeugt eine URL, die auf die Karte verweist.
@@ -71,7 +71,7 @@ var gtaLocator = (function GtaLocator() {
      * zoom: Zoomfaktor der Karte
      */
     var getLocationMapSrc = function (lat, lon, tags, zoom) {
-        zoom = typeof zoom !== 'undefined' ? zoom : 10;
+        zoom = typeof zoom !== 'undefined' ? zoom : 15;
 
         if (apiKey === "YOUR API KEY HERE") {
             console.log("No API key provided.");
@@ -94,15 +94,34 @@ var gtaLocator = (function GtaLocator() {
 
     return { // Start öffentlicher Teil des Moduls ...
 
-        // Public Member
+        //Public Member
 
-        readme: "Dieses Objekt enthält 'öffentliche' Teile des Moduls.",
+        readme: "Dieses Objekt entält 'öffentliche' Teile des Moduls.",
 
-        update: function () {
-            // TODO Hier Inhalt der Funktion "update" ergänzen
+        updateLocation: function(){
+            tryLocate(function(position){
+                // Eintragen der Latitude und Longitude Werte
+                document.getElementById("tag-form_latitude").value = getLatitude(position);
+                document.getElementById("tag-form_longitude").value = getLongitude(position);
+                document.getElementById("filter-form_latitude").value = getLatitude(position);
+                document.getElementById("filter-form_longitude").value = getLongitude(position);
+                // ------ Pruefen der Eintragungen in hidden Feldern (auskommentieren !!!!) --------
+                    //document.getElementById("filter-form_latitude").hidden = false; 
+                    //document.getElementById("filter-form_longitude").hidden = false;
+                // ------ Pruefen ENDE ----------
+                // Aktualisieren der Map, indem src Attribut angepasst
+                document.getElementById("result-img").src = getLocationMapSrc(getLatitude(position), getLongitude(position));
+                // alert("Map Update Successful"); 
+            }, 
+            function(msg){
+                alert(msg);
+            });
+        },
+        aktualisiere: function(){
+
         }
 
-    }; // ... Ende öffentlicher Teil
+    }; //... Ende öffentlicher Teil
 })();
 
 /**
@@ -111,6 +130,7 @@ var gtaLocator = (function GtaLocator() {
  * des Skripts.
  */
 $(document).ready(function () {
-    alert("Hello World")
+    // alert("Hello World"),
     // TODO Hier den Aufruf für updateLocation einfügen
+    gtaLocator.updateLocation();
 });
