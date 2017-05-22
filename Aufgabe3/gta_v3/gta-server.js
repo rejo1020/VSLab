@@ -9,7 +9,7 @@
  */
 
 var http = require('http');
-//var path = require('path');
+var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var express = require('express');
@@ -29,12 +29,18 @@ app.set('view engine', 'ejs');
  */
 
 // TODO: CODE ERGÄNZEN
+app.use(express.static(__dirname + '/public'));
 
 /**
  * Konstruktor für GeoTag Objekte.
  * GeoTag Objekte sollen min. alle Felder des 'tag-form' Formulars aufnehmen.
  */
-
+function GeoTag (lautitude, longitude, tagName, hashtag) {
+	this.lautitude = lautitude;
+	this.longitude = longitude;
+	this.tagName = tagName;
+	this.hashtag = hashtag;
+}
 // TODO: CODE ERGÄNZEN
 
 /**
@@ -47,6 +53,31 @@ app.set('view engine', 'ejs');
  */
 
 // TODO: CODE ERGÄNZEN
+memoryModule = (function() {
+	var speicherArray = [];
+
+	return {
+		removeGeoTag : function () {
+		
+		},
+
+		addGeoTag : function () {
+			speicherArray.push(g = GeoTag(document.getElementById("lautitude"),
+											  document.getElementById("zweitesDing"),
+											  document.getElementById("drittesDing"),
+											  document.getElementById("viertesDing")));
+		},
+
+		searchByRadius : function () {
+
+		},
+
+		searchByKeyWord : function () {
+
+		},
+
+	}; //End Return
+})(); //End MemoryModule
 
 /**
  * Route mit Pfad '/' für HTTP 'GET' Requests.
